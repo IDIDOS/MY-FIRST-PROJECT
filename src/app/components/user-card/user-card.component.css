@@ -1,0 +1,51 @@
+.user-card{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   font-family:'Tahoma';
+   background-color: rgb(121, 21, 121);
+   width: 300px;
+   border-radius:30%;
+   height: 300px;
+   position: relative;
+   overflow: hidden;
+   cursor: alias;
+}
+.user-card img{
+   width:30%;
+}
+.user-card h3{
+   height: fit-content;
+}
+.add-info{
+   font-size: 15px;
+   width:200px;
+   display: flex;
+   text-wrap: nowrap;
+   flex-direction: column;
+}
+.delete-btn{
+   cursor: pointer;
+   background-color:rgb(230, 86, 86);
+width: 150px;
+height: 150px;
+   border: none;
+   position: absolute;
+   text-align: left;
+   border-radius: 50%;
+   right: -65px;
+   top:-65px;
+   transition: 0.3s linear;
+}
+.delete-btn img{
+   margin-top: 70px;
+   margin-left: 15px;
+   width: 40px; 
+   
+}
+.delete-btn:hover{
+   background-color: rgb(254, 30, 30);
+  
+}

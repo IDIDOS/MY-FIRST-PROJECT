@@ -1,0 +1,31 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:40px;
+}
+
+.wrapper-user-cards{
+    margin-top: 40px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+.create-user-btn{
+    background-color: rgb(72, 164, 61);
+    border: none;
+    width: 300px;
+    height: 60px;
+    color: white;
+    font-size: medium;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+.create-user-btn:hover{
+    background-color: rgb(77, 195, 64);
+}

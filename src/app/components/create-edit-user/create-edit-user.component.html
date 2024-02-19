@@ -1,0 +1,22 @@
+<form [formGroup]="formGroup" (submit)="onSubmit()">
+    <mat-form-field appearance="outline">
+        <mat-label>FULL NAME</mat-label>
+        <input matInput formControlName="name" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>PHONE</mat-label>
+        <input matInput formControlName="phone" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>EMAIL</mat-label>
+        <input matInput formControlName="email" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>COMPANY NAME</mat-label>
+        <input matInput formControlName="company" />
+    </mat-form-field>
+    <mat-dialog-actions>
+        <button mat-button mat-dialog-close>ОТМЕНИТЬ</button>
+        <button mat-button type="submit" [disabled]="!formGroup.valid">{{isEdit ? 'ИЗМЕНИТЬ' : 'СОЗДАТЬ'}}</button>
+    </mat-dialog-actions>
+</form>

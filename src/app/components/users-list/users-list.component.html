@@ -1,0 +1,11 @@
+<main class="main">
+    <button class="create-user-btn" (click)="createUser()">Создать пользователя</button>
+
+    <div class="wrapper-user-cards">
+
+        @for (user of userService.users; track $index) {
+        <user-card [user]="user" (onDeleteUser)="deleteUser($index,$event)" (click)="editUser(user)"></user-card>
+        }
+
+    </div>
+</main>
