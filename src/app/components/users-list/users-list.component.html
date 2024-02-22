@@ -3,8 +3,8 @@
 
     <div class="wrapper-user-cards">
 
-        @for (user of userService.users; track $index) {
-        <user-card [user]="user" (onDeleteUser)="deleteUser($index,$event)" (click)="editUser(user)"></user-card>
+        @for (user of users$ | async; track $index) {
+        <user-card [user]="user" (onDeleteUser)="deleteUser($event)" (click)="editUser(user)"></user-card>
         }
 
     </div>

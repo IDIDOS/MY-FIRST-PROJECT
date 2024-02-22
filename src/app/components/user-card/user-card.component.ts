@@ -1,6 +1,10 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { IUser } from '../../models/user';
 
+export interface IUserCardEmitter {
+  event: MouseEvent,
+  id: number
+}
 @Component({
   selector: 'user-card',
   standalone: true,
@@ -9,13 +13,13 @@ import { IUser } from '../../models/user';
   styleUrl: './user-card.component.css',
 })
 export class UserCardComponent {
-  @Input()
+  @Input({ required: true })
   user!: IUser
 
   @Output()
-  onDeleteUser = new EventEmitter<MouseEvent>();
+  onDeleteUser = new EventEmitter<IUserCardEmitter>();
 
-  deleteUser(event: MouseEvent) {
-    this.onDeleteUser.emit(event);
+  deleteUser(event: MouseEvent, id: number) {
+    this.onDeleteUser.emit({ event, id });
   }
 }

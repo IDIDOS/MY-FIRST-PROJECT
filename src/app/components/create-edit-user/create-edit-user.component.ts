@@ -73,6 +73,5 @@ export class CreateEditUserComponent implements OnInit {
   }
   public onSubmit(): void {
     this.dialogRef.close(this.formGroup.value)
-
   }
 }
